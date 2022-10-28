@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+html(lang="ru")
+  head
+    include default/head.pug
+  body
+    main
+      .wrap
+        include basic/header.pug
+        .home
+          .home__container.container
+            h1.home__title Техническое обеспечение событий
+            button.home__btn Получить консультацию
+      .services#services
+        .services__container.container
+          h2.services__subtitle-h2.subtitle-h2 Наши услуги
+          .services__content
+            .services__item
+              .services__block.services__block_background_dark-grey
+                img.services__img(src="assets/img/services/services__img_1.png", alt="Lamps", width="79", height="79")
+                p.services__text Аренда светового оборудования
+              button.services__btn Оставить заявку
+            .services__item
+              .services__block.services__block_background_dark-grey
+                img.services__img(src="assets/img/services/services__img_2.png", alt="Subwoofer", width="79", height="79")
+                p.services__text Аренда звукового оборудования
+              button.services__btn Оставить заявку
+            .services__item
+              .services__block.services__block_background_dark-grey
+                img.services__img(src="assets/img/services/services__img_3.png", alt="Camera", width="79", height="79")
+                p.services__text Аренда видеооборудования
+              button.services__btn Оставить заявку
+            .services__item
+              .services__block.services__block_background_dark-grey
+                img.services__img(src="assets/img/services/services__img_4.png", alt="Scene", width="79", height="79")
+                p.services__text Аренда сценических конструкций
+              button.services__btn Оставить заявку
+            .services__item
+              .services__block.services__block_background_dark-grey
+                img.services__img(src="assets/img/services/services__img_5.png", alt="Live broadcast", width="79", height="79")
+                p.services__text Онлайн интернет трансляции
+              button.services__btn Оставить заявку
+      .intermediate
+        .intermediate__container.container
+          p.intermediate__text Обеспечим ваше событие всем необходимым и сделаем его незабываемым для вас
+          button.intermediate__btn Задать вопрос
+      .projects#projects
+        .projects__container.container
+          h2.projects__subtitle-h2.subtitle-h2 Наши проекты
+          .projects__content
+            .projects__item
+              p.projects__text Ermenegildo Zegna 20 лет
+            .projects__item
+              p.projects__text Студфест 2020
+            .projects__item
+              p.projects__text Международный форум по практической безопасности Positive HackDay
+            .projects__item
+              p.projects__text Russian Synth Community
+          button.projects__btn Загрузить еще
+      <!-- Вместо subtitle тегу h2 задать subtitle-h2, а h3 — subtitle-h3 -->
+      .request
+        .request__container.container
+          h2.request__subtitle-h2.subtitle-h2 Оставьте вашу заявку
+          h3.request__info Сделайте предварительный заказ и получите консультацию менеджера
+          .request__content
+            p.request__text Выберите необходимое для вашего мероприятия оборудование:
+            form.request__form.request-form
+              .request-form__body
+                .request-form__item
+                  input.request-form__checkbox(type="checkbox", id="checkbox_1")
+                  label.request-form__label(for="checkbox_1") Световое оборудование
+                .request-form__item
+                  input.request-form__checkbox(type="checkbox", id="checkbox_2")
+                  label.request-form__label(for="checkbox_2") Звуковое оборудование
+                .request-form__item 
+                  input.request-form__checkbox(type="checkbox", id="checkbox_3")
+                  label.request-form__label(for="checkbox_3") Видео- оборудование
+                .request-form__item
+                  input.request-form__checkbox(type="checkbox", id="checkbox_4")
+                  label.request-form__label(for="checkbox_4") Онлайн трансляция
+                .request-form__item
+                  input.request-form__checkbox(type="checkbox", id="checkbox_5")
+                  label.request-form__label(for="checkbox_5") Не знаю, нужна консультация
+              .request-form__footer
+                input.request-form__input(type="text", placeholder="Ваше имя")
+                input.request-form__input(type="text", placeholder="+7 --- --- -- --")
+                textarea.request-form__textarea(name="message", placeholder="Ваш комментарий к заявке")
+                button.request-form__btn Отправить заявку
+      .about-us#about-us
+        .about-us__container.container
+          h2.about-us__subtitle-h2.subtitle-h2 Кратко о нашей компании
+          p.about-us__text Компания  Т-ИВЕНТ  работает в индустрии развлечений с 2011 года , и за эти годы приняла участие в техническом обеспечении большого количества  самых разнообразных по формату «событий»:
+          .about-us__body
+            .about-us__item
+              h3.about-us__subtitle-h3 Деловые мероприятия
+              img.about-us__img(src="assets/img/about-us/about-us__img.png", alt="circle", width="44", height="44")
+            .about-us__item
+              h3.about-us__subtitle-h3 Фэшн мероприятия
+              img.about-us__img(src="assets/img/about-us/about-us__img.png", alt="circle", width="44", height="44")
+            .about-us__item
+              h3.about-us__subtitle-h3 Спортивные мероприятия
+              img.about-us__img(src="assets/img/about-us/about-us__img.png", alt="circle", width="44", height="44")
+            .about-us__item
+              h3.about-us__subtitle-h3 Культурно-развлекательные мероприятия
+              img.about-us__img(src="assets/img/about-us/about-us__img.png", alt="circle", width="44", height="44")
+            .about-us__item
+              h3.about-us__subtitle-h3 Образовательные мероприятия
+              img.about-us__img(src="assets/img/about-us/about-us__img.png", alt="circle", width="44", height="44")
+            .about-us__item
+              h3.about-us__subtitle-h3 Официальные мероприятия 
+              img.about-us__img(src="assets/img/about-us/about-us__img.png", alt="circle", width="44", height="44")
+            .about-us__item
+              h3.about-us__subtitle-h3 Частные мероприятия
+              img.about-us__img(src="assets/img/about-us/about-us__img.png", alt="circle", width="44", height="44")
+            .about-us__item
+              h3.about-us__subtitle-h3 Зрелищные мероприятия и шоу
+              img.about-us__img(src="assets/img/about-us/about-us__img.png", alt="circle", width="44", height="44")
+      .intermediate-2
+        .intermediate-2__container.container
+          p.intermediate-2__text Мы понимаем ваши потребности и готовы предложить  самое лучшее решение, под ваши цели и бюджет. Именно поэтому, обращаясь  в нашу компанию однажды - с нами работают снова и снова.
+          strong.intermediate-2__strong Спасибо вам за доверие и за то, что вы выбираете нас!
+      .partners#partners
+        .partners__container.container
+          h2.partners__subtitle-h2.subtitle-h2 Наши постоянные клиенты
+          .partners__content
+            img.partners__img(src="assets/img/partners/partners__img_1.png", alt="Moscow Urban Forum", width="198", height="120")
+            img.partners__img(src="assets/img/partners/partners__img_2.png", alt="New League", width="198", height="120")
+            img.partners__img(src="assets/img/partners/partners__img_3.png", alt="Mercury", width="198", height="120")
+            img.partners__img(src="assets/img/partners/partners__img_4.png", alt="Nobel Vision", width="198", height="120")
+            img.partners__img(src="assets/img/partners/partners__img_5.png", alt="РАХНиГС", width="198", height="120")
+            img.partners__img(src="assets/img/partners/partners__img_6.png", alt="Москва24", width="198", height="120")
+      .contacts#contacts
+        .contacts__container.container
+          .contacts__block.contacts__block_align_left
+            h2.contacts__subtitle-h2.contacts__subtitle-h2_align_left.subtitle-h2 Контакты
+            .contacts__item
+              p.contacts__text.contacts__text_fw_extra-bold.contacts__text_fw_extra-bold_align_left Адрес:
+              p.contacts__text.contacts__text_fw_regular.contacts__text_fw_regular_align_left Москва, ул. 2 Фрезерная, 3
+            .contacts__item
+              p.contacts__text.contacts__text_fw_extra-bold.contacts__text_fw_extra-bold_align_left Телефоны:
+              p.contacts__text.contacts__text_fw_regular.contacts__text_fw_regular_align_left +7 916 294-94-03, Фадеев Андрей
+              p.contacts__text.contacts__text_fw_regular.contacts__text_fw_regular_align_left +7 917 502-19-92, Фролов Максим
+            .contacts__item
+              p.contacts__text.contacts__text_fw_extra-bold.contacts__text_fw_extra-bold_align_left E-mail:
+              p.contacts__text.contacts__text_fw_regular.contacts__text_fw_regular_align_left info@t-event.ru
+            .contacts__item
+              p.contacts__text.contacts__text_fw_extra-bold.contacts__text_fw_extra-bold_align_left Соцсети и мессенджеры:
+              .contacts__social-network.social-network
+                a.contacts__link(href="#")
+                  img.contacts__social.social(src="assets/img/vk.svg", alt="vk logo")
+                a.contacts__link(href="#")
+                  img.contacts__social.social(src="assets/img/telegram.svg", alt="telegram logo")
+          .contacts__block.contacts__block_align_right
+            h2.contacts__subtitle-h2.contacts__subtitle-h2_align_right.subtitle-h2 Остались вопросы?
+            p.contacts__text.contacts__text_fw_regular.contacts__text_fw_regular_align_right Напишите нам, заполнив форму ниже:
+            form.contacts__form
+              input.contacts__input(type="text", placeholder="Ваше имя")
+              input.contacts__input(type="text", placeholder="+7 --- --- -- --")
+              input.contacts__input(type="text", placeholder="Ваш e-mail")
+              textarea.contacts__textarea(name="message", placeholder="Текст вашего сообщения")
+              button.contacts__btn Отправить
+    include basic/footer.pug
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js")
+    script(src="assets/js/script.min.js")

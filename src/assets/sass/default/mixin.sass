@@ -1,0 +1,44 @@
+// Mixin
+$layoutSize: 1440
+
+@mixin AdaptiveFont($minSize, $maxSize, $minLh, $maxLh)
+  $DesktopSize: $maxSize - $minSize
+  $MobSize: $DesktopSize + $DesktopSize * 0.7
+  $DesktopLh: $maxLh - $minLh
+  $MobLh: $DesktopLh + $DesktopLh * 0.7
+  @media screen and (min-width: 768px)
+    font-size: calc(#{$minSize + px} + #{$DesktopSize} * (100vw / #{$layoutSize}))
+    line-height: calc(#{$minLh + px} + #{$DesktopLh} * (100vw / #{$layoutSize}))
+  @media screen and (max-width: 768px)
+    font-size: calc(#{$minSize + px} + #{$MobSize} * ((100vw - 320px) / #{$layoutSize}))
+    line-height: calc(#{$minLh + px} + #{$MobLh} * ((100vw - 320px) / #{$layoutSize}))
+
+@mixin AdaptivePadding($minLeft, $maxLeft, $minTop, $maxTop)
+  $DesktopSize: $maxLeft - $minLeft
+  $MobSize: $DesktopSize + $DesktopSize * 0.7
+  $DesktopLh: $maxTop - $minTop
+  $MobLh: $DesktopLh + $DesktopLh * 0.7
+
+  $DesktopLeft: $maxLeft - $minLeft
+  $MobLeft: $DesktopSize + $DesktopSize * 0.7
+  $DesktopTop: $maxTop - $minTop
+  $MobTop: $DesktopLh + $DesktopLh * 0.7
+  @media screen and (min-width: 768px)
+    padding: calc(#{$minLeft + px} + #{$DesktopLeft} * (100vw / #{$layoutSize})) calc(#{$minTop + px} + #{$DesktopTop} * (100vw / #{$layoutSize}))
+  @media screen and (max-width: 768px)
+    padding: calc(#{$minLeft + px} + #{$MobLeft} * ((100vw - 320px) / #{$layoutSize})) calc(#{$minTop + px} + #{$MobTop} * ((100vw - 320px) / #{$layoutSize}))
+
+@mixin AdaptivePadding2($min1, $max1, $min2, $max2, $min3, $max3, $min4, $max4)
+  $Size1: $max1 - $min1
+  $Size2: $max2 - $min2
+  $Size3: $max3 - $min3
+  $Size4: $max4 - $min4
+  $MobSize1: $Size1 + $Size1 * 0.7
+  $MobSize2: $Size1 + $Size1 * 0.7
+  $MobSize3: $Size1 + $Size1 * 0.7
+  $MobSize4: $Size1 + $Size1 * 0.7
+
+  @media screen and (min-width: 768px)
+    padding: calc(#{$min1 + px} + #{$Size1} * (100vw / #{$layoutSize})) calc(#{$min2 + px} + #{$Size2} * (100vw / #{$layoutSize})) calc(#{$min3 + px} + #{$Size3} * (100vw / #{$layoutSize})) calc(#{$min4 + px} + #{$Size4} * (100vw / #{$layoutSize}))
+  @media screen and (max-width: 768px)
+    padding: calc(#{$min1 + px} + #{$MobSize1} * ((100vw - 320px) / #{$layoutSize})) calc(#{$min2 + px} + #{$MobSize2} * ((100vw - 320px) / #{$layoutSize})) calc(#{$min3 + px} + #{$MobSize3} * ((100vw - 320px) / #{$layoutSize})) calc(#{$min4 + px} + #{$MobSize4} * ((100vw - 320px) / #{$layoutSize}))

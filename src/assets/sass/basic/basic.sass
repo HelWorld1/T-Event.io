@@ -1,0 +1,42 @@
+/* Variables / Переменные */
+$white: #fff
+$grey: rgba(255, 255, 255, 0.3)
+$dark-grey: #202020
+$blue: #44AED9
+$black: #000
+/* Mixin / Шаблон кода */
+@import 'default/mixin.sass'
+/* Basic style / Основные стили */
+*
+  box-sizing: border-box
+
+a
+  text-decoration: none
+
+a, button
+  cursor: pointer
+
+img
+  object-fit: contain
+
+.container
+  max-width: 1110px
+  margin: 0 auto
+  padding: 0 5px
+
+.wrap
+  margin-bottom: 105px
+  background: url("../img/home/home__background.png") no-repeat local center center/cover
+
+.subtitle-h2
+  font-family: 'Neue Machina UltraBold'
+  font-weight: 800
+  @include AdaptiveFont(35, 40, 34, 39)
+.extra-bold
+  font-family: 'Neue Machina UltraBold'
+  font-weight: 800
+  font-size: 16px
+  line-height: 15px
+
+.social-network
+.social
